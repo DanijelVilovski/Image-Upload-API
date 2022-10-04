@@ -32,7 +32,7 @@ class UserRegistration(APIView):
 @method_decorator(csrf_protect, name='dispatch')    
 class UserDeletion(APIView):
 
-    permission_classes = (permissions.AllowAny, )
+    # permission_classes = (permissions.AllowAny, )
 
     #delete user
     def delete(self, request, pk, format=None):
@@ -61,7 +61,7 @@ class UserLogin(APIView):
 
 class UserLoginByID(APIView):
 
-    permission_classes = (permissions.AllowAny, )
+    # permission_classes = (permissions.AllowAny, )
 
     #user info by id
     def get(self, request, pk, format=None):
